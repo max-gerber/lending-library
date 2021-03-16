@@ -13,6 +13,7 @@ function drawToolBox(data) {
   var tools = ich.tools({
     'rows': data
   })
+  console.log(tools)
   $('#tools').html(tools)
 }
 
