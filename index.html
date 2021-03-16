@@ -77,10 +77,7 @@
 				Papa.parse(URL, {
 				download: true,
 				header: true,
-				complete: function(results) {
-					var data = results.data
-					console.log(data)
-				}
+				complete: initialize
 				})
 			})
 		</script>
