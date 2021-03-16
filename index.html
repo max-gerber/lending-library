@@ -5,7 +5,7 @@
 		<script type="text/javascript" src="js/ICanHaz.js"></script>
 		<script type="text/javascript" src='js/jquery.js'></script>
 		<script type="text/javascript" src='js/site.js'></script>
-		<script type="text/javascript" src='js/tabletop1.3.4.js'></script>
+		<script type="text/javascript" src='js/papaparse.min.js'></script>
 		<link rel="shortcut icon" href="https://raw.githubusercontent.com/jlord/lending-library/gh-pages/favico.png"/>
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
 		<link media="screen" rel="stylesheet" type="text/css" href="css/site.css">
@@ -72,10 +72,16 @@
 		</script>
 
 		<script type="text/javascript">
-		  document.addEventListener('DOMContentLoaded', function() {
-	      var URL = "2PACX-1vQHAgbd_g31llq1uiLun8d6rvegez0HKD9z8yDQXVhG788We1NuX3EgLQgaRs72am9kFDOtVuALgWjI"
-	      Tabletop.init( { key: URL, callback: initialize, simpleSheet: true } )
-	    })
+			document.addEventListener('DOMContentLoaded', function() {
+				var URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQHAgbd_g31llq1uiLun8d6rvegez0HKD9z8yDQXVhG788We1NuX3EgLQgaRs72am9kFDOtVuALgWjI/pub?output=csv"
+				Papa.parse(URL, {
+				download: true,
+				header: true,
+				complete: function(results) {
+					var data = results.data
+					console.log(data)
+				}
+			})
 		</script>
 	</body>
 </html>
