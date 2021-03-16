@@ -3,8 +3,8 @@ var gData;
     Draw the toolbox with an array of spreadsheet data
     and cache the data in a global variable.
 */
-function initialize(data) {
-    gData = data
+function initialize(results) {
+    gData = results.data
     drawToolBox(data)
 }
 
