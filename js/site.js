@@ -9,9 +9,9 @@ function initialize(results) {
     drawToolBox(gData)
 }
 
-function drawToolBox(data) {
+function drawToolBox(gData) {
   var tools = ich.tools({
-    'rows': data
+    'rows': gData
   })
   console.log(tools)
   $('#tools').html(tools)
