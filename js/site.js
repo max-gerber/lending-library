@@ -5,7 +5,8 @@ var gData;
 */
 function initialize(results) {
     gData = results.data
-    drawToolBox(data)
+    console.log(gData)
+    drawToolBox(gData)
 }
 
 function drawToolBox(data) {
